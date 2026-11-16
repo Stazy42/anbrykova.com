@@ -173,3 +173,6 @@ body{background:#eeefef}
 .case-cover .cover-background{position:absolute;left:-54.64%;top:-18.45%;width:202.73%;height:123.19%;max-width:none;object-fit:fill}
 .case-cover .cover-orbit{display:none}
 @media(max-width:760px){.case-cover .cover-art{transform:translate(-50%,-50%) scale(.73)}}
+
+.project-card--spam>.spam-phone{left:30%}
+@media(max-width:760px){.project-card--spam>.spam-phone{left:62px}}

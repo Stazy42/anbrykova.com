@@ -166,3 +166,10 @@ body{background:#eeefef}
 @media(max-width:760px){.email-row{gap:12px}.email-copy-button{width:24px;height:24px}}
 @media(hover:none){.primary-button .button-arrow{width:16px;margin-left:8px;opacity:1;transform:translateX(0)}}
 @media(prefers-reduced-motion:reduce){.button-arrow,.email-copy-button>img,.copy-check,.copy-fail{transition:none}}
+
+/* Match the nested image crop and rotation used by Figma's case cover frame. */
+.case-cover .cover-art{position:absolute;z-index:0;left:calc(50% - 21.7px);top:calc(50% + 5.6px);width:1871.895px;height:1193.844px;display:flex;align-items:center;justify-content:center;transform:translate(-50%,-50%);pointer-events:none}
+.case-cover .cover-art-rotated{position:relative;flex:none;width:1166.392px;height:1854.755px;overflow:hidden;transform:rotate(89.15deg)}
+.case-cover .cover-background{position:absolute;left:-54.64%;top:-18.45%;width:202.73%;height:123.19%;max-width:none;object-fit:fill}
+.case-cover .cover-orbit{display:none}
+@media(max-width:760px){.case-cover .cover-art{transform:translate(-50%,-50%) scale(.73)}}

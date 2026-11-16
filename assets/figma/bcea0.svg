@@ -1,0 +1,31 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="547.35" height="547.35" viewBox="0 0 547.35 547.35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<foreignObject x="9.53674e-07" y="9.53674e-07" width="547.35" height="547.35"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(5.02px);clip-path:url(#bgblur_0_0_13_clip_path);height:100%;width:100%"></div></foreignObject><g id="Ellipse 817" opacity="0.6" filter="url(#filter0_d_0_13)" data-figma-bg-blur-radius="10.0489">
+<ellipse cx="269.037" cy="265.172" rx="228.841" ry="228.841" fill="white" fill-opacity="0.2" shape-rendering="crispEdges"/>
+<ellipse cx="269.037" cy="265.172" rx="228.841" ry="228.841" fill="url(#paint0_linear_0_13)" shape-rendering="crispEdges"/>
+<mask id="stroke0_0_13" fill="white">
+<path d="M497.878 265.172C497.878 391.558 395.423 494.013 269.037 494.013C142.651 494.013 40.1957 391.558 40.1957 265.172C40.1957 138.786 142.651 36.3307 269.037 36.3307C395.423 36.3307 497.878 138.786 497.878 265.172Z"/>
+</mask>
+<ellipse cx="269.037" cy="265.172" rx="228.841" ry="228.841" stroke-width="1.99861" stroke="url(#paint1_linear_0_13)" shape-rendering="crispEdges" mask="url(#stroke0_0_13)"/>
+</g>
+<defs>
+<filter id="filter0_d_0_13" x="9.53674e-07" y="9.53674e-07" width="547.35" height="547.35" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="4.63796" dy="8.50293"/>
+<feGaussianBlur stdDeviation="22.4168"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.270588 0 0 0 0 0.290196 0 0 0 0 0.321569 0 0 0 0.03 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_13"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_13" result="shape"/>
+</filter>
+<clipPath id="bgblur_0_0_13_clip_path" transform="translate(-9.53674e-07 -9.53674e-07)"><ellipse cx="269.037" cy="265.172" rx="228.841" ry="228.841"/>
+</clipPath><linearGradient id="paint0_linear_0_13" x1="277.655" y1="-15.2648" x2="345.126" y2="476.172" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.74"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_13" x1="-346.477" y1="89.9286" x2="-115.065" y2="1056.74" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F5F7FB"/>
+<stop offset="1" stop-color="#DEE1EF"/>
+</linearGradient>
+</defs>
+</svg>

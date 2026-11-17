@@ -24,6 +24,7 @@
   function activatePage(nextPage) {
     homePage.hidden = nextPage !== 'home';
     casePage.hidden = nextPage !== 'case';
+    document.body.classList.toggle('is-case', nextPage === 'case');
     history.replaceState(null, '', nextPage === 'case' ? '#case-summary' : '#home');
     window.scrollTo({ top: nextPage === 'case' ? 0 : homeScrollY, behavior: 'instant' });
     requestAnimationFrame(bindVisibleAnchors);

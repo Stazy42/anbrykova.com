@@ -3,32 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#eeefef" />
     <title>Anastasiia Brykova — Product designer</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#home" aria-label="Anastasiia Brykova"><img src="./assets/figma/005db.svg" alt="Anastasiia Brykova" /></a>
+      <a class="brand" href="#home" aria-label="Anastasiia Brykova"><img src="./assets/figma/8bf1a.svg" alt="Anastasiia Brykova" /></a>
       <nav class="top-links" aria-label="Main navigation"><a href="#selected-projects">Work</a><a href="#expertise">About</a></nav>
       <nav class="header-actions" aria-label="Contact links">
-        <a href="#contact" aria-label="LinkedIn"><img src="./assets/figma/38c69.svg" alt="" /></a>
-        <a href="mailto:abrykova42@gmail.com" aria-label="Email"><img src="./assets/figma/f2cba.svg" alt="" /></a>
-        <a href="#contact" aria-label="Telegram"><img src="./assets/figma/6baac.svg" alt="" /></a>
-        <a class="cv-link" href="#contact">CV</a>
+        <a href="mailto:abrykova42@gmail.com" aria-label="Email"><img src="./assets/figma/db1e0.svg" alt="" /></a>
+        <a href="https://www.linkedin.com/in/anastasiya-brykova/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><img src="./assets/figma/b7d04.svg" alt="" /></a>
+        <a class="cv-link" href="https://docs.google.com/document/d/1HtILi0Gn-26uvrNjkzQ0NlTSuB1BUJIaWS1LwMlI-lk/edit?tab=t.0" target="_blank" rel="noopener noreferrer" aria-label="CV"><img src="./assets/figma/06f4a.svg" alt="" /></a>
       </nav>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><img src="./assets/figma/60055.svg" alt="" /></button>
     </header>
 
-    <div class="bottom-glass" aria-hidden="true"></div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <div class="mobile-menu-header">
+        <a href="#home" class="mobile-menu-brand" aria-label="Anastasiia Brykova"><img src="./assets/figma/1b975.svg" alt="" /></a>
+        <button class="menu-close" type="button" aria-label="Close menu"><img src="./assets/figma/715b5.svg" alt="" /></button>
+      </div>
+      <nav class="mobile-menu-content" aria-label="Main navigation">
+        <div class="mobile-menu-links">
+          <a class="is-active" href="#selected-projects">Work <img src="./assets/figma/8518e.svg" alt="" /></a>
+          <a href="#expertise">About</a>
+        </div>
+        <img class="mobile-menu-divider" src="./assets/figma/47782.svg" alt="" />
+        <div class="mobile-menu-actions" aria-label="Contact links">
+          <a class="mobile-email-link" href="mailto:abrykova42@gmail.com"><img src="./assets/figma/173d8.svg" alt="" />Email me</a>
+          <a class="mobile-icon-link" href="https://www.linkedin.com/in/anastasiya-brykova/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="./assets/figma/38c69.svg" alt="" /></a>
+          <a class="mobile-cv-link" href="https://docs.google.com/document/d/1HtILi0Gn-26uvrNjkzQ0NlTSuB1BUJIaWS1LwMlI-lk/edit?tab=t.0" target="_blank" rel="noopener noreferrer">CV</a>
+        </div>
+      </nav>
+    </div>
 
     <main id="home" class="page page-home">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-photo"><img src="./assets/figma/b3b79.png" alt="Anastasiia Brykova" /></div>
-        <img class="hero-signature" src="./assets/figma/cf39e.svg" alt="" />
+        <picture class="hero-signature"><source media="(max-width: 760px)" srcset="./assets/figma/46443.svg" /><img src="./assets/figma/5d2d7.svg" alt="" /></picture>
         <div class="hero-content">
           <p class="hero-kicker">Design System Lead &amp; Senior product designer</p>
           <h1 id="hero-title">I simplify complex products<br />and build design systems</h1>
-          <a class="primary-button" href="#selected-projects">View projects</a>
+          <a class="primary-button" href="#selected-projects"><span class="button-label">View projects</span><span class="button-arrow" aria-hidden="true"></span></a>
         </div>
       </section>
 
@@ -44,11 +61,15 @@
       </section>
 
       <section id="selected-projects" class="projects section-anchor">
-        <div class="section-heading"><h2>Selected projects</h2><div class="client-marks" aria-hidden="true"><img src="./assets/figma/28b01.svg" alt="" /><img src="./assets/figma/b658a.svg" alt="" /><img src="./assets/figma/59454.svg" alt="" /></div></div>
+        <div class="section-heading"><h2>Selected projects</h2><div class="client-marks" aria-label="Selected client websites">
+          <a href="https://zdorovie.ru/" target="_blank" rel="noopener noreferrer" aria-label="Zdorovie"><img src="./assets/figma/28b01.svg" alt="" /></a>
+          <a href="https://moskva.mts.ru/personal" target="_blank" rel="noopener noreferrer" aria-label="MTS"><img src="./assets/figma/b658a.svg" alt="" /></a>
+          <a href="https://garage-eight.com/" target="_blank" rel="noopener noreferrer" aria-label="Garage"><img src="./assets/figma/59454.svg" alt="" /></a>
+        </div></div>
         <div class="project-list">
           <article class="project-card project-card--system">
             <div class="card-content"><div class="tags"><i>Fintech</i><i>Design system</i><i>Design leadership</i></div><div class="project-copy"><h3>Leading building<br />the multibrand multiplatform design system</h3><p>Leading the strategy and development of a multi-brand design system for web, iOS, and Android. Shared tokens, components and assets provide a scalable foundation for consistent interfaces across brands and product teams</p></div></div>
-            <img class="project-art project-art--system" src="./assets/figma/17905.png" alt="" />
+            <picture class="project-art project-art--system"><source media="(max-width: 760px)" srcset="./assets/figma/f936f.png" /><img src="./assets/figma/72d45.png" alt="" /></picture>
           </article>
           <div class="project-pair">
             <article class="project-card project-card--process">
@@ -56,7 +77,7 @@
               <img class="project-art project-art--process" src="./assets/figma/f1fd2.png" alt="" />
             </article>
             <article class="project-card project-card--spam" role="button" tabindex="0" aria-label="Launching paid spam protection app" data-project="spam">
-              <img class="spam-orbit" src="./assets/figma/c22dd.svg" alt="" />
+              <picture class="spam-orbit"><source media="(max-width: 760px)" srcset="./assets/figma/fccd9.svg" /><img src="./assets/figma/c22dd.svg" alt="" /></picture>
               <div class="card-content"><div class="tags"><i>Telecommunications</i><i>Design ownership</i><i>UX research</i></div><div class="project-copy"><h3>Launching paid spam protection app</h3><p>Design of activation and subscription management flows for paid spam protection app. User research informed clearer call-forwarding instructions, while the experience was adapted to each platform’s constraints</p></div></div>
               <img class="project-art project-art--spam" src="./assets/figma/e60e4.png" alt="" />
               <img class="spam-phone" src="./assets/figma/5c19e.png" alt="" />
@@ -64,14 +85,14 @@
           </div>
           <div class="project-pair">
             <article class="project-card project-card--health">
-              <img class="health-orbit" src="./assets/figma/be8b8.svg" alt="" /><img class="health-orbit health-orbit--two" src="./assets/figma/bab34.svg" alt="" /><img class="health-orbit health-orbit--three" src="./assets/figma/a19a8.svg" alt="" /><img class="health-orbit health-orbit--four" src="./assets/figma/13947.svg" alt="" /><img class="health-texture" data-part-prefix="./assets/figma/853ec.png.part" data-part-count="9" alt="" />
+              <picture class="health-orbit"><source media="(max-width: 760px)" srcset="./assets/figma/bcea0.svg" /><img src="./assets/figma/be8b8.svg" alt="" /></picture><img class="health-orbit health-orbit--two" src="./assets/figma/bab34.svg" alt="" /><img class="health-orbit health-orbit--three" src="./assets/figma/a19a8.svg" alt="" /><img class="health-orbit health-orbit--four" src="./assets/figma/13947.svg" alt="" /><img class="health-mobile-art" src="./assets/figma/4ba2e.svg" alt="" /><img class="health-texture" data-part-prefix="./assets/figma/853ec.png.part" data-part-count="9" alt="" />
               <div class="card-content"><div class="tags"><i>Healthtech</i><i>Design ownership</i><i>UX research</i></div><div class="project-copy"><h3>Redesigning health content discovery</h3><p>Redesign of a patient app’s education hub, with a unified content structure, search, and priorities shaped by user research and usage data. After launch, the number of users reading or listening to content nearly doubled</p></div></div>
               <img class="health-screens" src="./assets/figma/14281.png" alt="" />
             </article>
             <article class="project-card project-card--alerts">
               <img class="alert-orbit" src="./assets/figma/f37aa.png" alt="" />
               <div class="card-content"><div class="tags"><i>Telecommunications</i><i>Design ownership</i><i>UX research</i></div><div class="project-copy"><h3>Real-time scam alerts for families</h3><p>A family safety feature that alerts a designated member when a relative receives a suspected scam call, helping them intervene in real time. Design ownership covered research through release, including product analytics</p></div></div>
-              <img class="alert-body" src="./assets/figma/0deb4.png" alt="" /><img class="alert-mask" src="./assets/figma/ca0b4.png" alt="" /><img class="alert-screens" src="./assets/figma/0f5ec.png" alt="" /><img class="alert-screen-overlay" src="./assets/figma/eff2d.png" alt="" />
+              <img class="alert-body" src="./assets/figma/0deb4.png" alt="" /><picture class="alert-mask"><source media="(max-width: 760px)" srcset="./assets/figma/444ba.png" /><img src="./assets/figma/ca0b4.png" alt="" /></picture><picture class="alert-screens"><source media="(max-width: 760px)" srcset="./assets/figma/29690.png" /><img src="./assets/figma/0f5ec.png" alt="" /></picture><img class="alert-screen-overlay" src="./assets/figma/eff2d.png" alt="" />
             </article>
           </div>
         </div>
@@ -79,7 +100,15 @@
 
       <footer id="contact" class="contact section-anchor">
         <h2>Share this approach?<br />Let’s talk</h2>
-        <a class="email-link" href="mailto:abrykova42@gmail.com">abrykova42@gmail.com <img src="./assets/figma/e9e28.svg" alt="" /></a>
+        <div class="email-row">
+          <a class="email-link" href="mailto:abrykova42@gmail.com">abrykova42@gmail.com</a>
+          <button class="email-copy-button" type="button" data-copy-email="abrykova42@gmail.com" data-state="idle" aria-label="Copy email address">
+            <img src="./assets/figma/5c7be.svg" alt="" />
+            <span class="copy-check" aria-hidden="true"></span>
+            <span class="copy-fail" aria-hidden="true"></span>
+            <span class="visually-hidden" data-copy-status aria-live="polite">Copy email address</span>
+          </button>
+        </div>
         <div class="footer-bottom"><span>Anastasiia Brykova</span><span>Design System Lead &amp; Senior product designer</span><span>Based in Tbilisi, Georgia</span></div>
       </footer>
     </main>
@@ -91,7 +120,7 @@
           <div class="case-topline"><div><img src="./assets/figma/44a5c.svg" alt="" /><span>MTS</span><span>/</span><span>2024</span></div><button class="close-case" type="button" data-return>Close <img src="./assets/figma/2e83d.svg" alt="" /></button></div>
           <h1>Launching paid spam protection app</h1>
           <p class="case-lead">Launching of the second version of the MVP app Defender with the addition of the paid service Spam Call Blocker</p>
-          <div class="case-cover"><img class="cover-background" src="./assets/figma/8b60a.png" alt="" /><img class="cover-orbit cover-orbit--one" src="./assets/figma/13bab.svg" alt="" /><img class="cover-orbit cover-orbit--two" src="./assets/figma/6ea75.svg" alt="" /><div class="case-phone case-phone--one"><img src="./assets/figma/3149d.png" alt="Defender app screen" /></div><div class="case-phone case-phone--two"><img src="./assets/figma/4217a.png" alt="Defender app screen" /></div><div class="case-phone case-phone--three"><img src="./assets/figma/f7823.png" alt="Defender app screen" /></div><div class="case-phone case-phone--four"><img src="./assets/figma/fdf10.png" alt="Defender app screen" /></div></div>
+          <div class="case-cover"><div class="cover-art" aria-hidden="true"><div class="cover-art-rotated"><img class="cover-background" src="./assets/figma/8b60a.png" alt="" /></div></div><div class="case-phone case-phone--one"><img src="./assets/figma/3149d.png" alt="Defender app screen" /></div><div class="case-phone case-phone--two"><img src="./assets/figma/4217a.png" alt="Defender app screen" /></div><div class="case-phone case-phone--three"><img src="./assets/figma/f7823.png" alt="Defender app screen" /></div><div class="case-phone case-phone--four"><img src="./assets/figma/fdf10.png" alt="Defender app screen" /></div></div>
           <div class="case-outcomes"><div><h2>Objectives</h2><ol><li>Refine existing screens and flows</li><li>Develop missing screens based on the approved concept</li><li>Conduct testing of ambiguous scenarios</li></ol></div><div><h2>Results</h2><ol><li>I completed the main tasks in the design part in 3 months, which helped speed up a quicker app release to the stores</li><li>The number of active users grew by an average of 21% after launch of the second version of MVP</li><li>SU accounted for 15% of the active user base</li></ol></div></div>
         </section>
         <section id="case-versions" class="case-section section-anchor"><div class="case-section-copy"><h2>First and Second Versions of the MVP</h2><p>The first version already available in the stores, only included the free feature of Caller ID, a spam complaint button, and onboarding. In the second version, we kept the Caller ID and spam complaint button, while also adding new sections and scenarios:</p><ul><li>Profile with MTS ID authorization</li><li>Activation of the paid Spam Call Blocker feature</li><li>Subscription management</li><li>Call log and call details with transcription</li><li>Tips (FAQ)</li><li>Native spam call complaint feature</li></ul></div><div class="case-gallery case-gallery--two"><img src="./assets/figma/3149d.png" alt="First version of MVP" /><img src="./assets/figma/4217a.png" alt="Second version of MVP" /></div></section>

@@ -6,10 +6,6 @@
   let homeScrollY = 0;
   let transitioning = false;
 
-  function updateScrollChrome() {
-    document.body.classList.toggle('is-scrolling', window.scrollY > 12);
-  }
-
   async function restoreSplitAssets() {
     const images = [...document.querySelectorAll('img[data-part-prefix]')];
     await Promise.all(images.map(async image => {
@@ -30,7 +26,6 @@
     casePage.hidden = nextPage !== 'case';
     history.replaceState(null, '', nextPage === 'case' ? '#case-summary' : '#home');
     window.scrollTo({ top: nextPage === 'case' ? 0 : homeScrollY, behavior: 'instant' });
-    updateScrollChrome();
     requestAnimationFrame(bindVisibleAnchors);
   }
 
@@ -94,8 +89,52 @@
     });
   });
 
-  window.addEventListener('scroll', updateScrollChrome, { passive: true });
-  updateScrollChrome();
+  const menu = document.querySelector('#mobile-menu');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menuClose = document.querySelector('.menu-close');
+
+  function setMenuOpen(isOpen) {
+    menu.hidden = !isOpen;
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Menu is open' : 'Open menu');
+    document.body.classList.toggle('menu-open', isOpen);
+    if (isOpen) menuClose.focus();
+    else menuToggle.focus();
+  }
+
+  menuToggle.addEventListener('click', () => setMenuOpen(menu.hidden));
+  menuClose.addEventListener('click', () => setMenuOpen(false));
+  menu.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', () => setMenuOpen(false));
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !menu.hidden) setMenuOpen(false);
+  });
+
+  const copyButton = document.querySelector('.email-copy-button');
+  const copyStatus = copyButton.querySelector('[data-copy-status]');
+  let copyResetTimer;
+
+  function setCopyState(state) {
+    copyButton.dataset.state = state;
+    const label = state === 'copied' ? 'Email copied' : state === 'failed' ? "Couldn't copy email" : 'Copy email address';
+    copyButton.setAttribute('aria-label', label);
+    copyStatus.textContent = label;
+    if (state !== 'idle') {
+      window.clearTimeout(copyResetTimer);
+      copyResetTimer = window.setTimeout(() => setCopyState('idle'), 3000);
+    }
+  }
+
+  copyButton.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(copyButton.dataset.copyEmail);
+      setCopyState('copied');
+    } catch {
+      setCopyState('failed');
+    }
+  });
+
   bindVisibleAnchors();
   restoreSplitAssets();
 })();
